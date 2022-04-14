@@ -13,9 +13,9 @@ import { Button } from "@mui/material";
 const AddBnt = styled(Button)(({ theme }) => ({
   padding: theme.spacing(1),
   borderRadius: "50%",
-  minWidth: "40px",
-  width: "40px",
-  height: "40px",
+  minWidth: 40,
+  width: 40,
+  height: 40,
   backgroundColor: "#303030",
 
   "&:hover": {
@@ -26,8 +26,8 @@ const AddBnt = styled(Button)(({ theme }) => ({
 const TypeIcon = styled("div")(({ theme }) => ({
   marginRight: theme.spacing(2),
   borderRadius: theme.shape.borderRadius,
-  width: "20px",
-  height: "20px",
+  width: 20,
+  height: 20,
   color: "#fff",
   display: "flex",
   justifyContent: "center",

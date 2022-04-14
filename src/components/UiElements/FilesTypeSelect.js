@@ -5,10 +5,10 @@ import Select from "@mui/material/Select";
 import { styled } from "@mui/material/styles";
 
 const DropDown = styled(Select)(({ theme }) => ({
-  paddingTop: "5px",
+  paddingTop: 5,
 }));
 
-function FilseTypeSelect(props) {
+function FilesTypeSelect(props) {
   const [type, setType] = React.useState("");
 
   const handleType = (event) => {
@@ -30,4 +30,4 @@ function FilseTypeSelect(props) {
   );
 }
 
-export default FilseTypeSelect;
+export default FilesTypeSelect;

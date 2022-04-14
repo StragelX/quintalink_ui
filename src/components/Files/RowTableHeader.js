@@ -3,7 +3,7 @@ import FlexContainer from "./../UiElements/FlexContainer";
 import Search from "./../Header/Search";
 import AvatarGroupWrap from "./../UiElements/AvatarGroupWrap";
 import TableContentSwitch from "./../UiElements/TableContentSwitch";
-import FilseTypeSelect from "./../UiElements/FilseTypeSelect";
+import FilesTypeSelect from "./../UiElements/FilesTypeSelect";
 
 function RowTableHeader(props) {
   return (
@@ -11,7 +11,7 @@ function RowTableHeader(props) {
       <div className="flex items-center gap-4">
         <Search />
 
-        <FilseTypeSelect />
+        <FilesTypeSelect />
 
         <AvatarGroupWrap />
       </div>
