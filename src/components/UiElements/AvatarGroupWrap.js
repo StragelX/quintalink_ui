@@ -4,7 +4,7 @@ import AvatarGroup from "@mui/material/AvatarGroup";
 
 function AvatarGroupWrap(props) {
   return (
-    <AvatarGroup max={4} className={props.className}>
+    <AvatarGroup max={props.max} className={props.className}>
       <Avatar alt="Remy Sharp" src="" />
       <Avatar alt="Travis Howard" src="" />
       <Avatar alt="Cindy Baker" src="" />
