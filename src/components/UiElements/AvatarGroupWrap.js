@@ -2,7 +2,7 @@ import * as React from "react";
 import Avatar from "@mui/material/Avatar";
 import AvatarGroup from "@mui/material/AvatarGroup";
 
-function AvatarGroupWrap(props) {
+export default function AvatarGroupWrap(props) {
   return (
     <AvatarGroup max={props.max} className={props.className}>
       <Avatar alt="Remy Sharp" src="" />
@@ -13,5 +13,3 @@ function AvatarGroupWrap(props) {
     </AvatarGroup>
   );
 }
-
-export default AvatarGroupWrap;

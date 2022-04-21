@@ -108,6 +108,33 @@ const mainTheme = createTheme({
         },
       },
     },
+
+    MuiTableCell: {
+      styleOverrides: {
+        root: {
+          padding: "14px 10px",
+          borderBottom: "none",
+          boxShadow: "inset 0px -1px 0px rgba(0, 0, 0, 0.1)",
+        },
+
+        head: {
+          "&:not(:last-child):after": {
+            content: "''",
+            borderRight: "1px solid #E0E0E0",
+            right: "0",
+            position: "relative",
+          },
+        },
+      },
+    },
+
+    MuiTableSortLabel: {
+      styleOverrides: {
+        root: {
+          width: "100%",
+        },
+      },
+    },
   },
 });
 

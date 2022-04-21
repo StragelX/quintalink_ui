@@ -13,7 +13,7 @@ function RowTableHeader(props) {
 
         <FilesTypeSelect />
 
-        <AvatarGroupWrap max="4" />
+        <AvatarGroupWrap max={4} />
       </div>
 
       <TableContentSwitch />

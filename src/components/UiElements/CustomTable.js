@@ -13,6 +13,7 @@ import Typography from "@mui/material/Typography";
 import AvatarGroupWrap from "./AvatarGroupWrap";
 import CustomChip from "./CustomChip";
 import FileTypeMarker from "./FileTypeMarker";
+import { Divider, Link } from "@mui/material";
 
 function createData(
   file,
@@ -38,7 +39,7 @@ function createData(
 
 const rows = [
   createData(
-    "s",
+    "p",
     "D-9477",
     "Nettie Fields",
     "990 Meadowbrook Drive Asbestos, QC J1T 5H6",
@@ -106,13 +107,11 @@ const headCells = [
     id: "user",
     disablePadding: false,
     label: "User",
-    disablePadding: true,
   },
   {
     id: "stage",
     disablePadding: false,
     label: "Stage",
-    disablePadding: true,
   },
 ];
 
@@ -132,20 +131,6 @@ function getComparator(order, orderBy) {
     : (a, b) => -descendingComparator(a, b, orderBy);
 }
 
-// This method is created for cross-browser compatibility, if you don't
-// need to support IE11, you can use Array.prototype.sort() directly
-function stableSort(array, comparator) {
-  const stabilizedThis = array.map((el, index) => [el, index]);
-  stabilizedThis.sort((a, b) => {
-    const order = comparator(a[0], b[0]);
-    if (order !== 0) {
-      return order;
-    }
-    return a[1] - b[1];
-  });
-  return stabilizedThis.map((el) => el[0]);
-}
-
 function EnhancedTableHead(props) {
   const { order, orderBy, onRequestSort } = props;
   const createSortHandler = (property) => (event) => {
@@ -162,9 +147,12 @@ function EnhancedTableHead(props) {
               direction={orderBy === headCell.id ? order : "asc"}
               onClick={createSortHandler(headCell.id)}
             >
-              {headCell.label}
+              <Typography variant="body2" noWrap>
+                {headCell.label}
+              </Typography>
+
               {orderBy === headCell.id ? (
-                <Box component="span" sx={visuallyHidden}>
+                <Box sx={visuallyHidden}>
                   {order === "desc" ? "sorted descending" : "sorted ascending"}
                 </Box>
               ) : null}
@@ -203,55 +191,56 @@ export default function EnhancedTable() {
           rowCount={rows.length}
         />
         <TableBody>
-          {/* if you don't need to support IE11, you can replace the `stableSort` call with:
-                 rows.slice().sort(getComparator(order, orderBy)) */}
-          {stableSort(rows, getComparator(order, orderBy)).map((row, index) => {
-            const labelId = `enhanced-table-checkbox-${index}`;
+          {rows
+            .slice()
+            .sort(getComparator(order, orderBy))
+            .map((row, index) => {
+              const labelId = `enhanced-table-checkbox-${index}`;
 
-            return (
-              <TableRow hover key={row.id}>
-                <TableCell id={labelId} scope="row" padding="none">
-                  <FileTypeMarker type={row.file} />
-                </TableCell>
+              return (
+                <TableRow hover key={row.id}>
+                  <TableCell id={labelId} scope="row" padding="none">
+                    <FileTypeMarker type={row.file} />
+                  </TableCell>
 
-                <TableCell>
-                  <Typography variant="body1" noWrap>
-                    {row.id}
-                  </Typography>
-                </TableCell>
+                  <TableCell>
+                    <Typography variant="body1" noWrap>
+                      <Link href="stats">{row.id}</Link>
+                    </Typography>
+                  </TableCell>
 
-                <TableCell>
-                  <Typography variant="body1" noWrap>
-                    {row.name}
-                  </Typography>
-                </TableCell>
+                  <TableCell>
+                    <Typography variant="body1" noWrap>
+                      {row.name}
+                    </Typography>
+                  </TableCell>
 
-                <TableCell>
-                  <Typography variant="body1">{row.adress}</Typography>
-                </TableCell>
+                  <TableCell>
+                    <Typography variant="body1">{row.adress}</Typography>
+                  </TableCell>
 
-                <TableCell>
-                  <Typography variant="body1" noWrap>
-                    {row.requisition_gate}
-                  </Typography>
-                </TableCell>
+                  <TableCell>
+                    <Typography variant="body1" noWrap>
+                      {row.requisition_gate}
+                    </Typography>
+                  </TableCell>
 
-                <TableCell>
-                  <Typography variant="body1" noWrap>
-                    {row.closing_date}
-                  </Typography>
-                </TableCell>
+                  <TableCell>
+                    <Typography variant="body1" noWrap>
+                      {row.closing_date}
+                    </Typography>
+                  </TableCell>
 
-                <TableCell>
-                  <AvatarGroupWrap max="2" />
-                </TableCell>
+                  <TableCell>
+                    <AvatarGroupWrap max="2" />
+                  </TableCell>
 
-                <TableCell>
-                  <CustomChip />
-                </TableCell>
-              </TableRow>
-            );
-          })}
+                  <TableCell>
+                    <CustomChip />
+                  </TableCell>
+                </TableRow>
+              );
+            })}
         </TableBody>
       </Table>
     </TableContainer>

@@ -4,16 +4,25 @@ export default function FileTypeMarker(props) {
   let cls = "";
   switch (props.type) {
     case "s":
-      cls = "background: #FFB400";
+      cls = "bg-[#FFB400]";
+      break;
     case "m":
-      cls = "background: #2196F3";
+      cls = "bg-[#2196F3]";
+      break;
     case "p":
-      cls = "background: #4CAF50";
+      cls = "bg-[#4CAF50]";
+      break;
+    default:
+      cls = "";
   }
+
   return (
     <div
-      className="w-6 h-6 flex items-center rounded justify-center text-sm text-white"
-      style={cls}
+      className={
+        cls +
+        " w-6 h-6 flex items-center rounded justify-center text-sm text-white uppercase " +
+        props.className
+      }
     >
       {props.type}
     </div>
