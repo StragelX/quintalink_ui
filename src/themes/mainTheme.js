@@ -4,6 +4,12 @@ import { grey } from "@mui/material/colors";
 const sidebarWidth = "56px";
 
 const mainTheme = createTheme({
+  props: {
+    MuiButton: {
+      disableElevation: true,
+    },
+  },
+
   palette: {
     primary: {
       main: "#4CAF50",
@@ -11,6 +17,10 @@ const mainTheme = createTheme({
 
     white: {
       main: "#fff",
+    },
+
+    black_078: {
+      main: "rgba(0, 0, 0, 0.87)",
     },
 
     grey_600: {
@@ -121,7 +131,7 @@ const mainTheme = createTheme({
           "&:not(:last-child):after": {
             content: "''",
             borderRight: "1px solid #E0E0E0",
-            right: "0",
+            right: "-5px",
             position: "relative",
           },
         },
@@ -132,6 +142,15 @@ const mainTheme = createTheme({
       styleOverrides: {
         root: {
           width: "100%",
+        },
+      },
+    },
+
+    MuiButton: {
+      styleOverrides: {
+        contained: {
+          color: "#fff",
+          boxShadow: "none !important",
         },
       },
     },

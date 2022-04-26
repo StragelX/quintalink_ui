@@ -6,7 +6,7 @@ import FilesViewSelector from "./UiElements/FilesViewSelector";
 import DateSelector from "./UiElements/DateSelector";
 import RoundedPaper from "./UiElements/RoundedPaper";
 import RowTableHeader from "./Files/RowTableHeader";
-import CustomTable from "./UiElements/CustomTable";
+import CustomTable from "./UiElements/CustomTable/CustomTable";
 
 const ContentBox = styled("div")(({ theme }) => ({
   minHeight: `calc(100vh - 64px)`,
