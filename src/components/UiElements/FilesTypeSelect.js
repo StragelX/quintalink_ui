@@ -6,9 +6,19 @@ import { styled } from "@mui/material/styles";
 
 const DropDown = styled(Select)(({ theme }) => ({
   paddingTop: 5,
+
+  MuiSelect: {
+    select: {
+      backgoundColor: "#333"
+    }
+  },
+
+  "& MuiSelect-select": {
+    backgoundColor: "#333"
+  }
 }));
 
-function FilesTypeSelect(props) {
+export default function FilesTypeSelect(props) {
   const [type, setType] = React.useState("");
 
   const handleType = (event) => {
@@ -17,7 +27,7 @@ function FilesTypeSelect(props) {
 
   return (
     <FormControl sx={{ minWidth: 150 }} className={props.className}>
-      <Select value={type} onChange={handleType} displayEmpty>
+      <DropDown value={type} onChange={handleType} displayEmpty>
         <MenuItem value="">
           <em>None</em>
         </MenuItem>
@@ -25,9 +35,7 @@ function FilesTypeSelect(props) {
         <MenuItem value={2}>File: type 1</MenuItem>
         <MenuItem value={3}>File: type 2</MenuItem>
         <MenuItem value={4}>File: type 3</MenuItem>
-      </Select>
+      </DropDown>
     </FormControl>
   );
 }
-
-export default FilesTypeSelect;

@@ -1,7 +1,7 @@
 import { Paper } from "@mui/material";
 import * as React from "react";
 
-function FlexContainer({ children, ...props }) {
+export default function FlexContainer({ children, ...props }) {
   return (
     <Paper
       elevation={0}
@@ -12,5 +12,3 @@ function FlexContainer({ children, ...props }) {
     </Paper>
   );
 }
-
-export default FlexContainer;

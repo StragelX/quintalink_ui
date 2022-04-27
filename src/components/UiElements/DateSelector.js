@@ -1,7 +1,5 @@
 import * as React from "react";
 
-function DateSelector() {
+export default function DateSelector() {
   return <div></div>;
 }
-
-export default DateSelector;

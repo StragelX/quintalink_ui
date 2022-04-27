@@ -7,7 +7,7 @@ const Btn = styled(ToggleButton)(({ theme }) => ({
   textTransform: "capitalize",
 }));
 
-function TableContentSwitch(props) {
+export default function TableContentSwitch(props) {
   const [type, setType] = React.useState("all");
 
   const handleType = (event, newType) => {
@@ -32,5 +32,3 @@ function TableContentSwitch(props) {
     </ToggleButtonGroup>
   );
 }
-
-export default TableContentSwitch;

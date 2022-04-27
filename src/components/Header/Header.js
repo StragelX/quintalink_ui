@@ -4,7 +4,7 @@ import Breadcrumbs from "./Breadcrumbs";
 import UserBar from "./UserBar";
 import FlexContainer from "../UiElements/FlexContainer";
 
-function Header() {
+export default function Header() {
   return (
     <AppBar position="static" color="white" elevation={0}>
       <Toolbar>
@@ -17,5 +17,3 @@ function Header() {
     </AppBar>
   );
 }
-
-export default Header;

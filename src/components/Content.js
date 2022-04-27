@@ -16,10 +16,13 @@ const ContentBox = styled("div")(({ theme }) => ({
   paddingBottom: theme.spacing(6),
 }));
 
-function Content() {
+export default function Content() {
   return (
     <ContentBox>
       <Container>
+        <FlexContainer>
+        </FlexContainer>
+
         <FlexContainer>
           <FilesViewSelector></FilesViewSelector>
 
@@ -37,5 +40,3 @@ function Content() {
     </ContentBox>
   );
 }
-
-export default Content;

@@ -32,10 +32,10 @@ const TypeIcon = styled("div")(({ theme }) => ({
   display: "flex",
   justifyContent: "center",
   alignItems: "center",
-  fontSize: "13px",
+  fontSize: 13,
 }));
 
-function AddButton() {
+export default function AddButton() {
   const [isActive, setActive] = useState(false);
 
   const AddClickEvent = (event) => {
@@ -116,5 +116,3 @@ function AddButton() {
     </div>
   );
 }
-
-export default AddButton;

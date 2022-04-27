@@ -5,7 +5,7 @@ import AvatarGroupWrap from "./../UiElements/AvatarGroupWrap";
 import TableContentSwitch from "./../UiElements/TableContentSwitch";
 import FilesTypeSelect from "./../UiElements/FilesTypeSelect";
 
-function RowTableHeader(props) {
+export default function RowTableHeader(props) {
   return (
     <FlexContainer className={props.className + " mb-7"}>
       <div className="flex items-center gap-4">
@@ -20,5 +20,3 @@ function RowTableHeader(props) {
     </FlexContainer>
   );
 }
-
-export default RowTableHeader;

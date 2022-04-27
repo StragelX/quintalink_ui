@@ -10,7 +10,7 @@ const AvailibleIcon = styled(Button)(({ theme }) => ({
   color: theme.palette.primary.main,
 }));
 
-function AvailibleFile() {
+export default function AvailibleFile() {
   return (
     <AvailibleIcon>
       <Typography variant="subtitle2" color="primary">
@@ -19,5 +19,3 @@ function AvailibleFile() {
     </AvailibleIcon>
   );
 }
-
-export default AvailibleFile;

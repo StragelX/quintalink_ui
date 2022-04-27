@@ -1,6 +1,6 @@
 import * as React from "react";
 
-function FlexContainer({ children, ...props }) {
+export default function FlexContainer({ children, ...props }) {
   return (
     <div
       className={props.className + " flex items-center justify-between w-full"}
@@ -9,5 +9,3 @@ function FlexContainer({ children, ...props }) {
     </div>
   );
 }
-
-export default FlexContainer;

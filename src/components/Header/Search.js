@@ -21,7 +21,7 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
   },
 }));
 
-function SearchWrap(props) {
+export default function SearchWrap(props) {
   return (
     <Search className={props.className}>
       <Stack direction="row">
@@ -32,5 +32,3 @@ function SearchWrap(props) {
     </Search>
   );
 }
-
-export default SearchWrap;

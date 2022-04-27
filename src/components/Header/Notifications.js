@@ -2,7 +2,7 @@ import * as React from "react";
 import { Button, Badge } from "@mui/material";
 import NotificationsIcon from "@mui/icons-material/Notifications";
 
-function Notifications() {
+export default function Notifications() {
   return (
     <Button
       disableElevation
@@ -31,5 +31,3 @@ function Notifications() {
     </Button>
   );
 }
-
-export default Notifications;

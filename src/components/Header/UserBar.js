@@ -5,7 +5,7 @@ import Search from "./Search";
 import AddButton from "./AddButton";
 import AvailibleFile from "./AvailibleFile";
 
-function UserBar() {
+export default function UserBar() {
   return (
     <Stack direction="row" spacing={1.5}>
       <Search></Search>
@@ -27,5 +27,3 @@ function UserBar() {
     </Stack>
   );
 }
-
-export default UserBar;

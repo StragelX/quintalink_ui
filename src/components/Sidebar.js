@@ -11,7 +11,7 @@ import StarRateIcon from "@mui/icons-material/StarRate";
 import StyleIcon from "@mui/icons-material/Style";
 import SettingsIcon from "@mui/icons-material/Settings";
 
-function Sidebar() {
+export default function Sidebar() {
   return (
     <Drawer variant="permanent" anchor="left" open={true}>
       <ThemeProvider theme={sidebarTheme}>
@@ -68,5 +68,3 @@ function Sidebar() {
     </Drawer>
   );
 }
-
-export default Sidebar;

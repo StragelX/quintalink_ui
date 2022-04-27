@@ -4,7 +4,7 @@ import ChromeReaderModeOutlinedIcon from "@mui/icons-material/ChromeReaderModeOu
 import TableRowsIcon from "@mui/icons-material/TableRows";
 import DateRangeIcon from "@mui/icons-material/DateRange";
 
-function FilesViewSelector(props) {
+export default function FilesViewSelector(props) {
   const [viewtype, setViewType] = React.useState("book");
 
   const handleViewType = (event, newViewType) => {
@@ -36,5 +36,3 @@ function FilesViewSelector(props) {
     </div>
   );
 }
-
-export default FilesViewSelector;
