@@ -8,12 +8,13 @@ const AvailibleIcon = styled(Button)(({ theme }) => ({
   backgroundColor: theme.palette.grey_100.main,
   padding: theme.spacing(1, 3),
   color: theme.palette.primary.main,
+  textTransform: "capitalize",
 }));
 
 export default function AvailibleFile() {
   return (
     <AvailibleIcon>
-      <Typography variant="subtitle2" color="primary">
+      <Typography variant="subtitle2" component={"p"} color="primary">
         28 Files Available
       </Typography>
     </AvailibleIcon>

@@ -4,10 +4,10 @@ import TableRow from "@mui/material/TableRow";
 import Typography from "@mui/material/Typography";
 import AvatarGroupWrap from "../AvatarGroupWrap";
 import CustomChip from "../CustomChip";
-import FileTypeMarker from "../FileTypeMarker";
 import { Link } from "@mui/material";
 import DateSelectionDrop from "./DateSelectionDrop";
 import { styled } from "@mui/material/styles";
+import TypeIcon from "../TypeIcon";
 
 const CustomLink = styled(Link)(({ theme }) => ({
   color: theme.palette.black_078.main,
@@ -25,12 +25,12 @@ export default function CustomTableRow(props) {
   return (
     <TableRow hover key={row.id}>
       <TableCell id={props.labelId} scope="row" padding="none">
-        <FileTypeMarker type={row.file} />
+        <TypeIcon variant={row.file} />
       </TableCell>
 
       <TableCell>
         <Typography variant="body1" noWrap>
-          <CustomLink href="stats">{row.id}</CustomLink>
+          <CustomLink text={row.id} />
         </Typography>
       </TableCell>
 
@@ -67,7 +67,7 @@ export default function CustomTableRow(props) {
       </TableCell>
 
       <TableCell>
-        <CustomChip />
+        <CustomChip variant={row.stage} />
       </TableCell>
     </TableRow>
   );

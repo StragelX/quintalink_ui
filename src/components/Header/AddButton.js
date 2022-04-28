@@ -9,6 +9,7 @@ import Divider from "@mui/material/Divider";
 import GroupIcon from "@mui/icons-material/Group";
 import BusinessIcon from "@mui/icons-material/Business";
 import { Button } from "@mui/material";
+import TypeIcon from "../UiElements/TypeIcon";
 
 const AddBnt = styled(Button)(({ theme }) => ({
   padding: theme.spacing(1),
@@ -23,23 +24,8 @@ const AddBnt = styled(Button)(({ theme }) => ({
   },
 }));
 
-const TypeIcon = styled("div")(({ theme }) => ({
-  marginRight: theme.spacing(2),
-  borderRadius: theme.shape.borderRadius,
-  width: 20,
-  height: 20,
-  color: "#fff",
-  display: "flex",
-  justifyContent: "center",
-  alignItems: "center",
-  fontSize: 13,
-}));
-
 export default function AddButton() {
-  const [isActive, setActive] = useState(false);
-
   const AddClickEvent = (event) => {
-    setActive(!isActive);
     setAnchorEl(event.currentTarget);
   };
 
@@ -55,7 +41,7 @@ export default function AddButton() {
         aria-label="account of current user"
         aria-haspopup="true"
         className={
-          isActive
+          anchorEl
             ? "rotate-45 transition-transform"
             : "rotate-0 transition-transform"
         }
@@ -87,18 +73,18 @@ export default function AddButton() {
         </Typography>
 
         <MenuItem sx={{ pl: "20px" }} onClick={handleClose}>
-          <TypeIcon className="bg-[#4CAF50]">P</TypeIcon>
-          Purchase File
+          <TypeIcon variant="p" />
+          <span className="ml-4">Purchase File</span>
         </MenuItem>
 
         <MenuItem sx={{ pl: "20px" }} onClick={handleClose}>
-          <TypeIcon className="bg-[#FFB400]">S</TypeIcon>
-          Sale File
+          <TypeIcon variant="s" />
+          <span className="ml-4">Sale File</span>
         </MenuItem>
 
         <MenuItem sx={{ pl: "20px", mb: 1 }} onClick={handleClose}>
-          <TypeIcon className="bg-[#2196F3]">M</TypeIcon>
-          Mortgage File
+          <TypeIcon variant="m" />
+          <span className="ml-4">Mortgage File</span>
         </MenuItem>
 
         <Divider />

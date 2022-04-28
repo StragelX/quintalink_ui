@@ -4,12 +4,6 @@ import { grey } from "@mui/material/colors";
 const sidebarWidth = "56px";
 
 const mainTheme = createTheme({
-  props: {
-    MuiButton: {
-      disableElevation: true,
-    },
-  },
-
   palette: {
     primary: {
       main: "#4CAF50",
@@ -17,6 +11,10 @@ const mainTheme = createTheme({
 
     white: {
       main: "#fff",
+    },
+
+    black: {
+      main: "#000",
     },
 
     black_078: {

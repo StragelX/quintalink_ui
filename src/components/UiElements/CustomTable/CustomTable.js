@@ -12,7 +12,6 @@ function createData(
   adress,
   requisition_gate,
   closing_date,
-  user,
   stage
 ) {
   return {
@@ -22,7 +21,6 @@ function createData(
     adress,
     requisition_gate,
     closing_date,
-    user,
     stage,
   };
 }
@@ -34,7 +32,8 @@ const rows = [
     "Nettie Fields",
     "990 Meadowbrook Drive Asbestos, QC J1T 5H6",
     "Jan 31, 2022",
-    "Jan 31, 2022"
+    "Jan 31, 2022",
+    "requisition"
   ),
   createData(
     "m",
@@ -42,7 +41,8 @@ const rows = [
     "Anna Fields",
     "990 Meadowbrook Drive Asbestos, QC J1T 5H6",
     "Jan 31, 2022",
-    "Jan 31, 2022"
+    "Jan 31, 2022",
+    "closing"
   ),
   createData(
     "s",
@@ -50,7 +50,8 @@ const rows = [
     "Nettie Johnson",
     "65 North Lane Saint-Isidore, NB E8M 3J7",
     "Nov 24, 2022",
-    "Nov 31, 2022"
+    "Nov 31, 2022",
+    "closing"
   ),
   createData(
     "m",
@@ -58,7 +59,8 @@ const rows = [
     "Sam Jhones",
     "990 Meadowbrook Drive Asbestos, QC J1T 5H6",
     "Jan 31, 2022",
-    "Jan 31, 2022"
+    "Jan 31, 2022",
+    "requisition"
   ),
 ];
 
