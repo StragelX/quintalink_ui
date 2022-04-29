@@ -58,6 +58,15 @@ const mainTheme = createTheme({
         icon: {
           color: "rgba(0, 0, 0, 0.54)",
         },
+
+        label: {
+          paddingLeft: 5,
+          paddingRight: 0,
+        },
+
+        iconSmall: {
+          marginLeft: 0,
+        },
       },
     },
 

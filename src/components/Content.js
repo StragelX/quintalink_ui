@@ -8,8 +8,7 @@ import RoundedPaper from "./UiElements/RoundedPaper";
 import RowTableHeader from "./Files/RowTableHeader";
 import CustomTable from "./UiElements/CustomTable/CustomTable";
 import TableDateSelector from "./Files/TableDateSelector";
-import WeekTableFile from "./Files/WeekTableFile";
-import MonthTableFile from "./Files/MonthTableFile";
+import WeekTable from "./Files/WeekTable";
 
 const ContentBox = styled("div")(({ theme }) => ({
   minHeight: `calc(100vh - 64px)`,
@@ -23,7 +22,21 @@ export default function Content() {
   return (
     <ContentBox>
       <Container>
-        {/* <FlexContainer>
+        <FlexContainer>
+          <FilesViewSelector />
+
+          <TableDateSelector />
+        </FlexContainer>
+
+        <FlexContainer className="mt-5">
+          <RoundedPaper className="p-6">
+            <RowTableHeader />
+
+            <WeekTable />
+          </RoundedPaper>
+        </FlexContainer>
+
+        {/* <FlexContainer className="mt-5">
           <FilesViewSelector />
 
           <DateSelector />
@@ -36,26 +49,6 @@ export default function Content() {
             <CustomTable />
           </RoundedPaper>
         </FlexContainer> */}
-
-        <FlexContainer className="mt-5">
-          <FilesViewSelector />
-
-          <TableDateSelector />
-        </FlexContainer>
-
-        <FlexContainer className="mt-5">
-          <RoundedPaper className="p-6">
-            <RowTableHeader />
-
-            <div className="w-[150px]">
-              <WeekTableFile />
-            </div>
-
-            <div className="w-[150px]">
-              <MonthTableFile />
-            </div>
-          </RoundedPaper>
-        </FlexContainer>
       </Container>
     </ContentBox>
   );

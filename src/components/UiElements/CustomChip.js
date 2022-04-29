@@ -26,7 +26,7 @@ export default function CustomChip({ variant, ...props }) {
           icon={<SportsScoreIcon color="black_06" />}
           label="Closing"
           variant="outlined"
-          sx={{ width: 103 }}
+          sx={{ width: 100 }}
           size="small"
         />
       );

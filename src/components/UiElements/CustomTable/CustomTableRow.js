@@ -30,14 +30,12 @@ export default function CustomTableRow(props) {
 
       <TableCell>
         <Typography variant="body1" noWrap>
-          <CustomLink text={row.id} />
+          <CustomLink to="" text={row.id} />
         </Typography>
       </TableCell>
 
       <TableCell>
-        <Typography variant="body1" noWrap>
-          {row.name}
-        </Typography>
+        <Typography variant="body1">{row.name}</Typography>
       </TableCell>
 
       <TableCell>

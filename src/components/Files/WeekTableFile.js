@@ -12,7 +12,7 @@ export default function WeekTableFile(props) {
       <FlexContainer>
         <TypeIcon type="p" />
 
-        <CustomChip variant={"closing"} />
+        <CustomChip variant={"requisition"} className="ml-1" />
       </FlexContainer>
 
       <div className="mt-2">
@@ -23,7 +23,7 @@ export default function WeekTableFile(props) {
         Manishapatel Peter and Corporation -ABC
       </Typography>
 
-      <div className="flex">
+      <div className="flex mt-1">
         <AvatarGroupWrap max={2} size="small" />
       </div>
     </div>
