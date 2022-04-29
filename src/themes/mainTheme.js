@@ -21,6 +21,10 @@ const mainTheme = createTheme({
       main: "rgba(0, 0, 0, 0.87)",
     },
 
+    black_06: {
+      main: "rgba(0, 0, 0, 0.6)",
+    },
+
     grey_600: {
       main: grey[600],
     },
@@ -49,6 +53,14 @@ const mainTheme = createTheme({
   },
 
   components: {
+    MuiChip: {
+      styleOverrides: {
+        icon: {
+          color: "rgba(0, 0, 0, 0.54)",
+        },
+      },
+    },
+
     MuiContainer: {
       styleOverrides: {
         root: {

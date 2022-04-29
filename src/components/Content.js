@@ -9,6 +9,7 @@ import RowTableHeader from "./Files/RowTableHeader";
 import CustomTable from "./UiElements/CustomTable/CustomTable";
 import TableDateSelector from "./Files/TableDateSelector";
 import WeekTableFile from "./Files/WeekTableFile";
+import MonthTableFile from "./Files/MonthTableFile";
 
 const ContentBox = styled("div")(({ theme }) => ({
   minHeight: `calc(100vh - 64px)`,
@@ -46,8 +47,12 @@ export default function Content() {
           <RoundedPaper className="p-6">
             <RowTableHeader />
 
-            <div className="w-[150px] border">
+            <div className="w-[150px]">
               <WeekTableFile />
+            </div>
+
+            <div className="w-[150px]">
+              <MonthTableFile />
             </div>
           </RoundedPaper>
         </FlexContainer>

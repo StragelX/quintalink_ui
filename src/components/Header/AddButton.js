@@ -73,17 +73,17 @@ export default function AddButton() {
         </Typography>
 
         <MenuItem sx={{ pl: "20px" }} onClick={handleClose}>
-          <TypeIcon variant="p" />
+          <TypeIcon type="p" />
           <span className="ml-4">Purchase File</span>
         </MenuItem>
 
         <MenuItem sx={{ pl: "20px" }} onClick={handleClose}>
-          <TypeIcon variant="s" />
+          <TypeIcon type="s" />
           <span className="ml-4">Sale File</span>
         </MenuItem>
 
         <MenuItem sx={{ pl: "20px", mb: 1 }} onClick={handleClose}>
-          <TypeIcon variant="m" />
+          <TypeIcon type="m" />
           <span className="ml-4">Mortgage File</span>
         </MenuItem>
 

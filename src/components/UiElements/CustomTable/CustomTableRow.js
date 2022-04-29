@@ -25,7 +25,7 @@ export default function CustomTableRow(props) {
   return (
     <TableRow hover key={row.id}>
       <TableCell id={props.labelId} scope="row" padding="none">
-        <TypeIcon variant={row.file} />
+        <TypeIcon type={row.file} />
       </TableCell>
 
       <TableCell>

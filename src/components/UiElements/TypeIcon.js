@@ -10,17 +10,37 @@ const TIcon = styled("div")(({ theme }) => ({
   justifyContent: "center",
   alignItems: "center",
   fontSize: 13,
+  textTransform: "uppercase",
 }));
 
-export default function TypeIcon({ variant }) {
-  switch (variant) {
+const TIconSmall = styled("div")(({ theme }) => ({
+  borderRadius: "50%",
+  width: 12,
+  height: 12,
+  flex: "none",
+}));
+
+export default function TypeIcon({ variant, ...props }) {
+  let cls = "";
+
+  switch (props.type) {
     case "s":
-      return <TIcon className="bg-[#FFB400]">S</TIcon>;
+      cls = "bg-[#FFB400]";
+      break;
     case "m":
-      return <TIcon className="bg-[#2196F3]">M</TIcon>;
+      cls = "bg-[#2196F3]";
+      break;
     case "p":
-      return <TIcon className="bg-[#4CAF50]">P</TIcon>;
+      cls = "bg-[#4CAF50]";
+      break;
     default:
-      return;
+      return "";
+  }
+
+  switch (variant) {
+    case "small":
+      return <TIconSmall className={cls}></TIconSmall>;
+    default:
+      return <TIcon className={cls}>{props.type}</TIcon>;
   }
 }

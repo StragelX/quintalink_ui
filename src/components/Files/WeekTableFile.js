@@ -6,17 +6,17 @@ import CustomLink from "../UiElements/CustomLink";
 import FlexContainer from "../UiElements/FlexContainer";
 import TypeIcon from "../UiElements/TypeIcon";
 
-export default function WeekTableFile() {
+export default function WeekTableFile(props) {
   return (
     <div className="px-2 py-4">
       <FlexContainer>
-        <TypeIcon variant="p" />
+        <TypeIcon type="p" />
 
         <CustomChip variant={"closing"} />
       </FlexContainer>
 
       <div className="mt-2">
-        <CustomLink text="PS TC006.02" />
+        <CustomLink to="" text="PS TC006.02" />
       </div>
 
       <Typography variant="body2" component="p">

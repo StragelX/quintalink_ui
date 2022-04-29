@@ -12,7 +12,7 @@ export default function CustomChip({ variant, ...props }) {
       return (
         <Chip
           className={props.className}
-          icon={<SyncIcon />}
+          icon={<SyncIcon color="black_06" />}
           label="Requisition"
           variant="outlined"
           sx={{ width: 103 }}
@@ -23,7 +23,7 @@ export default function CustomChip({ variant, ...props }) {
       return (
         <Chip
           className={props.className}
-          icon={<SportsScoreIcon />}
+          icon={<SportsScoreIcon color="black_06" />}
           label="Closing"
           variant="outlined"
           sx={{ width: 103 }}
