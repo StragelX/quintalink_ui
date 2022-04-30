@@ -14,7 +14,7 @@ const CLink = styled(Link)(({ theme }) => ({
 
 export default function CustomLink(props) {
   return (
-    <CLink href="stats" className={props.className}>
+    <CLink href={props.to} className={props.className}>
       {props.text}
     </CLink>
   );

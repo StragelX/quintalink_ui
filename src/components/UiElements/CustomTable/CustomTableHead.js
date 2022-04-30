@@ -9,47 +9,47 @@ import { visuallyHidden } from "@mui/utils";
 import Typography from "@mui/material/Typography";
 
 const headCells = [
-    {
-      id: "file",
-      disablePadding: true,
-      label: "File",
-    },
-    {
-      id: "id",
-      disablePadding: false,
-      label: "ID",
-    },
-    {
-      id: "name",
-      disablePadding: false,
-      label: "Client Name",
-    },
-    {
-      id: "adress",
-      disablePadding: false,
-      label: "Property Address",
-    },
-    {
-      id: "requisition_gate",
-      disablePadding: false,
-      label: "Requisition Date",
-    },
-    {
-      id: "closing_date",
-      disablePadding: false,
-      label: "Closing Date",
-    },
-    {
-      id: "user",
-      disablePadding: false,
-      label: "User",
-    },
-    {
-      id: "stage",
-      disablePadding: false,
-      label: "Stage",
-    },
-  ];
+  {
+    id: "file",
+    disablePadding: true,
+    label: "File",
+  },
+  {
+    id: "id",
+    disablePadding: false,
+    label: "ID",
+  },
+  {
+    id: "name",
+    disablePadding: false,
+    label: "Client Name",
+  },
+  {
+    id: "adress",
+    disablePadding: false,
+    label: "Property Address",
+  },
+  {
+    id: "requisition_gate",
+    disablePadding: false,
+    label: "Requisition Date",
+  },
+  {
+    id: "closing_date",
+    disablePadding: false,
+    label: "Closing Date",
+  },
+  {
+    id: "user",
+    disablePadding: false,
+    label: "User",
+  },
+  {
+    id: "stage",
+    disablePadding: false,
+    label: "Stage",
+  },
+];
 
 EnhancedTableHead.propTypes = {
   onRequestSort: PropTypes.func.isRequired,
@@ -67,7 +67,7 @@ export default function EnhancedTableHead(props) {
   return (
     <TableHead>
       <TableRow>
-        {headCells.map((headCell) => (
+        {headCells.map((headCell, key) => (
           <TableCell key={headCell.id}>
             <TableSortLabel
               active={orderBy === headCell.id}

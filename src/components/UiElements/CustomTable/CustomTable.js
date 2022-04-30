@@ -4,65 +4,7 @@ import TableBody from "@mui/material/TableBody";
 import TableContainer from "@mui/material/TableContainer";
 import CustomTableRow from "./CustomTableRow";
 import CustomTableHead from "./CustomTableHead";
-
-function createData(
-  file,
-  id,
-  name,
-  adress,
-  requisition_gate,
-  closing_date,
-  stage
-) {
-  return {
-    file,
-    id,
-    name,
-    adress,
-    requisition_gate,
-    closing_date,
-    stage,
-  };
-}
-
-const rows = [
-  createData(
-    "p",
-    "D-9477",
-    "Nettie Fields",
-    "990 Meadowbrook Drive Asbestos, QC J1T 5H6",
-    "Jan 31, 2022",
-    "Jan 31, 2022",
-    "requisition"
-  ),
-  createData(
-    "m",
-    "D-9417",
-    "Anna Fields",
-    "990 Meadowbrook Drive Asbestos, QC J1T 5H6",
-    "Jan 31, 2022",
-    "Jan 31, 2022",
-    "closing"
-  ),
-  createData(
-    "s",
-    "D-9421",
-    "Nettie Johnson",
-    "65 North Lane Saint-Isidore, NB E8M 3J7",
-    "Nov 24, 2022",
-    "Nov 31, 2022",
-    "closing"
-  ),
-  createData(
-    "m",
-    "D-9424",
-    "Sam Jhones",
-    "990 Meadowbrook Drive Asbestos, QC J1T 5H6",
-    "Jan 31, 2022",
-    "Jan 31, 2022",
-    "requisition"
-  ),
-];
+import { filesInfo } from "../../../data";
 
 function descendingComparator(a, b, orderBy) {
   if (b[orderBy] < a[orderBy]) {
@@ -96,10 +38,10 @@ export default function EnhancedTable() {
           order={order}
           orderBy={orderBy}
           onRequestSort={handleRequestSort}
-          rowCount={rows.length}
+          rowCount={filesInfo.length}
         />
         <TableBody>
-          {rows
+          {filesInfo
             .slice()
             .sort(getComparator(order, orderBy))
             .map((row, index) => {

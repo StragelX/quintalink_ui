@@ -19,7 +19,7 @@ export default function TableContentSwitch(props) {
       className={props.className}
       variant="contained"
       color="white"
-      disableElevation
+      elevation={0}
       value={type}
       exclusive
       onChange={handleType}

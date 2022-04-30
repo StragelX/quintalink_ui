@@ -25,17 +25,17 @@ export default function CustomTableRow(props) {
   return (
     <TableRow hover key={row.id}>
       <TableCell id={props.labelId} scope="row" padding="none">
-        <TypeIcon type={row.file} />
+        <TypeIcon type={row.type} />
       </TableCell>
 
       <TableCell>
         <Typography variant="body1" noWrap>
-          <CustomLink to="" text={row.id} />
+          <CustomLink to={row.link} text={row.linkText} />
         </Typography>
       </TableCell>
 
       <TableCell>
-        <Typography variant="body1">{row.name}</Typography>
+        <Typography variant="body1">{row.title}</Typography>
       </TableCell>
 
       <TableCell>
@@ -61,7 +61,7 @@ export default function CustomTableRow(props) {
       </TableCell>
 
       <TableCell>
-        <AvatarGroupWrap max="2" />
+        <AvatarGroupWrap max={2} />
       </TableCell>
 
       <TableCell>

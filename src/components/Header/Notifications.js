@@ -5,7 +5,7 @@ import NotificationsIcon from "@mui/icons-material/Notifications";
 export default function Notifications() {
   return (
     <Button
-      disableElevation
+    elevation={0}
       color="grey_100"
       variant="contained"
       sx={{

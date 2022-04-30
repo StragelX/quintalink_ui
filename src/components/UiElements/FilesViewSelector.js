@@ -16,7 +16,7 @@ export default function FilesViewSelector(props) {
       <ToggleButtonGroup
         variant="contained"
         color="white"
-        disableElevation
+        elevation={0}
         value={viewtype}
         exclusive
         onChange={handleViewType}
