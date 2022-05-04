@@ -5,6 +5,7 @@ import { styled } from "@mui/material/styles";
 const CLink = styled(Link)(({ theme }) => ({
   color: theme.palette.black_078.main,
   textDecoration: "none",
+  fontSize: 14,
 
   "&:hover": {
     color: "#000",

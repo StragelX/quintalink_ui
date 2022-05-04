@@ -18,7 +18,7 @@ import TypeIcon from "../UiElements/TypeIcon";
 
 export default function WeekTableFile(props) {
   return (
-    <div className="px-2 py-4">
+    <div className="px-2 py-4 hover:bg-hover_grey">
       <FlexContainer>
         <TypeIcon type={props.data.type} />
 

@@ -37,7 +37,7 @@ export default function Content() {
           </RoundedPaper>
         </FlexContainer>
 
-        {/* <FlexContainer>
+        <FlexContainer className="mt-5">
           <FilesViewSelector />
 
           <TableDateSelector />
@@ -49,9 +49,9 @@ export default function Content() {
 
             <WeekTable />
           </RoundedPaper>
-        </FlexContainer> */}
+        </FlexContainer>
 
-        {/* <FlexContainer className="mt-5">
+        <FlexContainer className="mt-5">
           <FilesViewSelector />
 
           <DateSelector />
@@ -63,7 +63,7 @@ export default function Content() {
 
             <CustomTable />
           </RoundedPaper>
-        </FlexContainer> */}
+        </FlexContainer>
       </Container>
     </ContentBox>
   );

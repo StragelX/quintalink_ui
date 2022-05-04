@@ -23,6 +23,7 @@ const CMenuItem = styled(MenuItem)(({ theme }) => ({
 const CMenuItemMore = styled(MenuItem)(({ theme }) => ({
   fontWeight: 500,
   padding: "3px 7px",
+  fontSize: 13,
 }));
 
 function StageType(val) {

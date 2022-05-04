@@ -94,7 +94,7 @@ export const week = [
 
 export const calendar = [
   {
-    date: "1",
+    date: "Jan 1",
   },
   {
     date: "2",
@@ -178,46 +178,27 @@ export const calendar = [
   {
     date: "28",
   },
+];
+
+export const users = [
   {
-    date: "29",
+    name: "Rick Sunchez",
+    type: "clerik",
   },
   {
-    date: "30",
+    name: "Luck Skywalker",
+    type: "clerik",
   },
   {
-    date: "31",
+    name: "Bruse Wayne",
+    type: "clerik",
   },
   {
-    date: "1",
+    name: "Mata Hare",
+    type: "Solisitor",
   },
   {
-    date: "2",
-  },
-  {
-    date: "3",
-  },
-  {
-    date: "4",
-  },
-  {
-    date: "5",
-  },
-  {
-    date: "6",
-  },
-  {
-    date: "7",
-  },
-  {
-    date: "8",
-  },
-  {
-    date: "9",
-  },
-  {
-    date: "10",
-  },
-  {
-    date: "11",
+    name: "Peter Parker",
+    type: "Solisitor",
   },
 ];
