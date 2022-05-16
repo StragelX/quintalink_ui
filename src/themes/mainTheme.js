@@ -17,6 +17,10 @@ const mainTheme = createTheme({
       main: "#000",
     },
 
+    black_038: {
+      main: "rgba(0, 0, 0, 0.38)",
+    },
+
     black_078: {
       main: "rgba(0, 0, 0, 0.87)",
     },

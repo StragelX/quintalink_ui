@@ -15,7 +15,7 @@ const CustomBox = styled(Box)(({ theme }) => ({
 }));
 
 export default function DateSelectionDrop(props) {
-  const AddClickEvent = (event) => {
+  const ClickEvent = (event) => {
     setAnchorEl(event.currentTarget);
   };
 
@@ -27,9 +27,7 @@ export default function DateSelectionDrop(props) {
 
   return (
     <div>
-      <CustomButton aria-haspopup="true" onClick={AddClickEvent}>
-        {props.value}
-      </CustomButton>
+      <CustomButton onClick={ClickEvent}>{props.value}</CustomButton>
 
       <Paper
         anchorEl={anchorEl}

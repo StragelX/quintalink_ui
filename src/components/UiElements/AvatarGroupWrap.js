@@ -1,15 +1,21 @@
 import * as React from "react";
-import Avatar from "@mui/material/Avatar";
 import AvatarGroup from "@mui/material/AvatarGroup";
+import { users } from "../../data";
+import CAvatar from "./CAvatar";
 
-export default function AvatarGroupWrap(props) {
+export default function AvatarGroupWrap({ variant, ...props }) {
   return (
     <AvatarGroup max={props.max} className={props.className}>
-      <Avatar alt="Remy Sharp" src="" />
-      <Avatar alt="Travis Howard" src="" />
-      <Avatar alt="Cindy Baker" src="" />
-      <Avatar alt="Agnes Walker" src="" />
-      <Avatar alt="Trevor Henderson" src="" />
+      {users.map((user, key) => {
+        return (
+          <CAvatar variant={props.size} key={key} alt={user.name} src="">
+            {user.name
+              .split(" ")
+              .map((item) => item.toUpperCase().substring(0, 1))
+              .join("")}
+          </CAvatar>
+        );
+      })}
     </AvatarGroup>
   );
 }

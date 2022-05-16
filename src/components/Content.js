@@ -23,7 +23,11 @@ export default function Content() {
   return (
     <ContentBox>
       <Container>
-        <FlexContainer>
+        <RoundedPaper className="px-8 py-11">
+          <FlexContainer className="mb-8"></FlexContainer>
+        </RoundedPaper>
+
+        <FlexContainer className="mt-5">
           <FilesViewSelector />
 
           <TableDateSelector />

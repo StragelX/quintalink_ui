@@ -15,7 +15,7 @@ export default function MonthTableColumn(props) {
         {props.data.date}
       </CTypography>
 
-      <MonthTableFile />
+      <MonthTableFile date={props.data.date} />
     </div>
   );
 }

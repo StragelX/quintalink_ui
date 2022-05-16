@@ -1,9 +1,9 @@
 import * as React from "react";
 import FlexContainer from "./../UiElements/FlexContainer";
 import Search from "./../Header/Search";
-import AvatarGroupWrap from "./../UiElements/AvatarGroupWrap";
 import TableContentSwitch from "./../UiElements/TableContentSwitch";
 import FilesTypeSelect from "./../UiElements/FilesTypeSelect";
+import CallDrop from "../DropDowns/CallDrop";
 
 export default function RowTableHeader(props) {
   return (
@@ -13,7 +13,7 @@ export default function RowTableHeader(props) {
 
         <FilesTypeSelect />
 
-        <AvatarGroupWrap max={4} />
+        <CallDrop variant={"avatar"} max="4"></CallDrop>
       </div>
 
       <TableContentSwitch />

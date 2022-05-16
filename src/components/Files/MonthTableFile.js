@@ -6,6 +6,7 @@ import TypeIcon from "../UiElements/TypeIcon";
 import SyncIcon from "@mui/icons-material/Sync";
 import SportsScoreIcon from "@mui/icons-material/SportsScore";
 import { filesInfo } from "../../data";
+import CallDrop from "../DropDowns/CallDrop";
 
 const CMenuItem = styled(MenuItem)(({ theme }) => ({
   padding: "3px 7px",
@@ -20,12 +21,6 @@ const CMenuItem = styled(MenuItem)(({ theme }) => ({
   },
 }));
 
-const CMenuItemMore = styled(MenuItem)(({ theme }) => ({
-  fontWeight: 500,
-  padding: "3px 7px",
-  fontSize: 13,
-}));
-
 function StageType(val) {
   if (val === "requisition") {
     return <SyncIcon />;
@@ -36,7 +31,7 @@ function StageType(val) {
 
 function CalcMore(val) {
   if (val.length > 3) {
-    return <CMenuItemMore>{val.length - 3 + " More"}</CMenuItemMore>;
+    return val.length - 3 + " More";
   }
 }
 
@@ -59,7 +54,11 @@ export default function MonthTableFile(props) {
         </Tooltip>
       ))}
 
-      {CalcMore(filesInfo)}
+      <CallDrop
+        variant={"more_files"}
+        value={CalcMore(filesInfo)}
+        date={props.date}
+      />
     </div>
   );
 }

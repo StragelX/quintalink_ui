@@ -5,9 +5,9 @@ import Typography from "@mui/material/Typography";
 import AvatarGroupWrap from "../AvatarGroupWrap";
 import CustomChip from "../CustomChip";
 import { Link } from "@mui/material";
-import DateSelectionDrop from "./DateSelectionDrop";
 import { styled } from "@mui/material/styles";
 import TypeIcon from "../TypeIcon";
+import CallDrop from "../../DropDowns/CallDrop";
 
 const CustomLink = styled(Link)(({ theme }) => ({
   color: theme.palette.black_078.main,
@@ -30,7 +30,8 @@ export default function CustomTableRow(props) {
 
       <TableCell>
         <Typography variant="body1" noWrap>
-          <CustomLink to={row.link} text={row.linkText} />
+          <CustomLink text={row.linkText} />
+          {row.linkText}
         </Typography>
       </TableCell>
 
@@ -44,18 +45,20 @@ export default function CustomTableRow(props) {
 
       <TableCell>
         <Typography variant="body1" noWrap>
-          <DateSelectionDrop
-            label={"Edit Requisition Date"}
+          <CallDrop
+            variant={"date"}
             value={row.requisition_gate}
+            label={"Edit Requisition Date"}
           />
         </Typography>
       </TableCell>
 
       <TableCell>
         <Typography variant="body1" noWrap>
-          <DateSelectionDrop
-            label={"Edit Closing Date"}
-            value={row.closing_date}
+          <CallDrop
+            variant={"date"}
+            value={row.requisition_gate}
+            label={"Edit Requisition Date"}
           />
         </Typography>
       </TableCell>

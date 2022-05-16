@@ -33,7 +33,7 @@ export default function EnhancedTable() {
 
   return (
     <TableContainer>
-      <Table aria-labelledby="tableTitle">
+      <Table>
         <CustomTableHead
           order={order}
           orderBy={orderBy}

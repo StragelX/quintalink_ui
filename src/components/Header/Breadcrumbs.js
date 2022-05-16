@@ -5,7 +5,6 @@ import NavigateNextIcon from "@mui/icons-material/NavigateNext";
 function Header() {
   return (
     <Breadcrumbs
-      aria-label="breadcrumb"
       separator={<NavigateNextIcon fontSize="small" />}
     >
       <Link underline="hover" color="inherit" variant="h6" href="/">
