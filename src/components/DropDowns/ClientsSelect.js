@@ -39,47 +39,54 @@ export default function ClientsSelect(props) {
       onClose={props.closeEvent}
     >
       <CustomBox>
-        <List
-          subheader={<ListSubheader component="div">Clerk (s):</ListSubheader>}
-        >
-          {users
-            .filter((e) => e.type === "clerik")
-            .map((user, key) => {
-              return (
-                <ListItem key={key}>
-                  <FormGroup sx={{ width: "100%" }}>
-                    <CFormControlLabel
-                      labelPlacement="start"
-                      control={<Checkbox color="black" />}
-                      label={user.name}
-                    />
-                  </FormGroup>
-                </ListItem>
-              );
-            })}
-        </List>
+        {users.filter((e) => e.type === "clerik").length ? (
+          <List
+            subheader={
+              <ListSubheader component="div">Clerk (s):</ListSubheader>
+            }
+          >
+            {users
+              .filter((e) => e.type === "clerik")
+              .map((user, key) => {
+                return (
+                  <ListItem key={key}>
+                    <FormGroup sx={{ width: "100%" }}>
+                      {/* TO DO add Avatar inside checkbox line */}
+                      <CFormControlLabel
+                        labelPlacement="start"
+                        control={<Checkbox color="black" />}
+                        label={user.name}
+                      />
+                    </FormGroup>
+                  </ListItem>
+                );
+              })}
+          </List>
+        ) : null}
 
-        <List
-          subheader={
-            <ListSubheader component="div">Solisitor (s):</ListSubheader>
-          }
-        >
-          {users
-            .filter((e) => e.type === "Solisitor")
-            .map((user, key) => {
-              return (
-                <ListItem key={key}>
-                  <FormGroup sx={{ width: "100%" }}>
-                    <CFormControlLabel
-                      labelPlacement="start"
-                      control={<Checkbox color="black" />}
-                      label={user.name}
-                    />
-                  </FormGroup>
-                </ListItem>
-              );
-            })}
-        </List>
+        {users.filter((e) => e.type === "Solisitor").length ? (
+          <List
+            subheader={
+              <ListSubheader component="div">Solisitor (s):</ListSubheader>
+            }
+          >
+            {users
+              .filter((e) => e.type === "Solisitor")
+              .map((user, key) => {
+                return (
+                  <ListItem key={key}>
+                    <FormGroup sx={{ width: "100%" }}>
+                      <CFormControlLabel
+                        labelPlacement="start"
+                        control={<Checkbox color="black" />}
+                        label={user.name}
+                      />
+                    </FormGroup>
+                  </ListItem>
+                );
+              })}
+          </List>
+        ) : null}
       </CustomBox>
     </Paper>
   );

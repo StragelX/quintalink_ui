@@ -78,8 +78,7 @@ export default function CallDrop({ variant, ...props }) {
         <div>
           <CMenuItemMore onClick={ClickEvent}>{props.value}</CMenuItemMore>
 
-          {/* TO DO */}
-          {/* pass day prop */}
+          {/* TO DO pass day prop */}
           <MoreFilesDrop
             closeEvent={handleClose}
             anchorEl={anchorEl}

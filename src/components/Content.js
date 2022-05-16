@@ -25,6 +25,8 @@ export default function Content() {
       <Container>
         <RoundedPaper className="px-8 py-11">
           <FlexContainer className="mb-8"></FlexContainer>
+          
+          <FlexContainer></FlexContainer>
         </RoundedPaper>
 
         <FlexContainer className="mt-5">
