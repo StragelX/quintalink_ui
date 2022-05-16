@@ -8,12 +8,29 @@ const CTypography = styled(Typography)(({ theme }) => ({
   color: theme.palette.black.main,
 }));
 
+const ActiveDay = styled(Typography)(({ theme }) => ({
+  margin: "auto",
+  textAlign: "center",
+  color: theme.palette.white.main,
+  borderRadius: "50%",
+  width: 20,
+  height: 20,
+  lineHeight: "20px",
+  backgroundColor: theme.palette.primary.main,
+}));
+
 export default function MonthTableColumn(props) {
   return (
     <div className="outline outline-1 outline-gray-200">
-      <CTypography variant="caption" component={"p"}>
-        {props.data.date}
-      </CTypography>
+      {props.data.isActive ? (
+        <ActiveDay variant="caption" component={"p"}>
+          {props.data.date}
+        </ActiveDay>
+      ) : (
+        <CTypography variant="caption" component={"p"}>
+          {props.data.date}
+        </CTypography>
+      )}
 
       <MonthTableFile date={props.data.date} />
     </div>
