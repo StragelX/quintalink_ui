@@ -12,7 +12,7 @@ export default function FilesViewSelector(props) {
   };
 
   return (
-    <div className={props.className}>
+    <div className={(props.className ? props.className : "")}>
       <ToggleButtonGroup
         variant="contained"
         color="white"

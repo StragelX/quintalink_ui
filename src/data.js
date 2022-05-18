@@ -202,3 +202,24 @@ export const users = [
     type: "Solisitor",
   },
 ];
+
+export const file = [
+  {
+    id: "ID 8045",
+    date: "04/07/2021",
+    ownerName: "Erik Edwards",
+    price: "800 000",
+    agreemantDate: "04/07/2021",
+    requisitionDate: "04/08/2021",
+    closingDate: "04/09/2021",
+  },
+  {
+    id: "ID 8045",
+    date: "04/07/2021",
+    ownerName: "Erik Edwards",
+    price: "800 000",
+    agreemantDate: "04/07/2021",
+    requisitionDate: "04/08/2021",
+    closingDate: "04/09/2021",
+  },
+];

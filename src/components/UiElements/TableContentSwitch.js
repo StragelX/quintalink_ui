@@ -16,7 +16,7 @@ export default function TableContentSwitch(props) {
 
   return (
     <ToggleButtonGroup
-      className={props.className}
+      className={(props.className ? props.className : "")}
       variant="contained"
       color="white"
       elevation={0}

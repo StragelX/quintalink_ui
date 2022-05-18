@@ -23,7 +23,7 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
 
 export default function SearchWrap(props) {
   return (
-    <Search className={props.className}>
+    <Search className={(props.className ? props.className : "")}>
       <Stack direction="row">
         <SearchIcon color="grey_0_6" />
 

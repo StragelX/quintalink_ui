@@ -7,7 +7,9 @@ import CallDrop from "../DropDowns/CallDrop";
 
 export default function RowTableHeader(props) {
   return (
-    <FlexContainer className={props.className + " mb-7"}>
+    <FlexContainer
+      className={"mb-7 " + (props.className ? props.className : "")}
+    >
       <div className="flex items-center gap-4">
         <Search />
 

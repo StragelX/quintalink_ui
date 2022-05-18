@@ -11,7 +11,7 @@ export default function CustomChip({ variant, ...props }) {
     case "requisition":
       return (
         <Chip
-          className={props.className}
+          className={props.className ? props.className : ""}
           icon={<SyncIcon color="black_06" />}
           label="Requisition"
           variant="outlined"
@@ -22,7 +22,7 @@ export default function CustomChip({ variant, ...props }) {
     case "closing":
       return (
         <Chip
-          className={props.className}
+          className={props.className ? props.className : ""}
           icon={<SportsScoreIcon color="black_06" />}
           label="Closing"
           variant="outlined"

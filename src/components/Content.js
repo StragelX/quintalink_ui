@@ -10,6 +10,8 @@ import CustomTable from "./UiElements/CustomTable/CustomTable";
 import TableDateSelector from "./Files/TableDateSelector";
 import WeekTable from "./Files/WeekTable";
 import MonthTable from "./Files/MonthTable";
+import CallDrop from "./DropDowns/CallDrop";
+import HeadingBlock from "./Files/FileDetailPage/HeadingBlock/HeadingBlock";
 
 const ContentBox = styled("div")(({ theme }) => ({
   minHeight: `calc(100vh - 64px)`,
@@ -23,11 +25,11 @@ export default function Content() {
   return (
     <ContentBox>
       <Container>
-        <RoundedPaper className="px-8 py-11">
-          <FlexContainer className="mb-8"></FlexContainer>
-          
-          <FlexContainer></FlexContainer>
-        </RoundedPaper>
+        <HeadingBlock />
+
+        <div className="my-5">
+          <CallDrop variant={"calendar"}>123</CallDrop>
+        </div>
 
         <FlexContainer className="mt-5">
           <FilesViewSelector />

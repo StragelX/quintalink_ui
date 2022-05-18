@@ -6,8 +6,6 @@ import AvatarGroupWrap from "../UiElements/AvatarGroupWrap";
 import ClientsSelect from "./ClientsSelect";
 import HeaderAddDrop from "./HeaderAddDrop";
 import AddButton from "../Header/AddButton";
-// import WeekMonthDrop from "../Files/WeekMonthDrop";
-// import WeekMonthSelect from "./WeekMonthSelect";
 import MoreFilesDrop from "./MoreFilesDrop";
 
 // PROPS
@@ -85,6 +83,16 @@ export default function CallDrop({ variant, ...props }) {
             date={props.date}
             day="mon"
           />
+        </div>
+      );
+
+    case "calendar":
+      return (
+        <div>
+          <Button ClickEvent={ClickEvent} anchorEl={anchorEl}>
+            calendar
+          </Button>
+          <HeaderAddDrop closeEvent={handleClose} anchorEl={anchorEl} />
         </div>
       );
 

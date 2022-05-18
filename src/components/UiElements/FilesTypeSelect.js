@@ -26,7 +26,7 @@ export default function FilesTypeSelect(props) {
   };
 
   return (
-    <FormControl sx={{ minWidth: 150 }} className={props.className}>
+    <FormControl sx={{ minWidth: 150 }} className={(props.className ? props.className : "")}>
       <DropDown value={type} onChange={handleType} displayEmpty>
         <MenuItem value="">
           <em>None</em>
