@@ -10,7 +10,7 @@ export default function UserBar() {
     <Stack direction="row" spacing={1.5}>
       <Search></Search>
 
-      <CallDrop variant={"add"}></CallDrop>
+      <CallDrop variant={"add"} />
 
       <Divider />
 

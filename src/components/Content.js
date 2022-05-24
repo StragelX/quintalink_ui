@@ -10,7 +10,6 @@ import CustomTable from "./UiElements/CustomTable/CustomTable";
 import TableDateSelector from "./Files/TableDateSelector";
 import WeekTable from "./Files/WeekTable";
 import MonthTable from "./Files/MonthTable";
-import CallDrop from "./DropDowns/CallDrop";
 import HeadingBlock from "./Files/FileDetailPage/HeadingBlock/HeadingBlock";
 
 const ContentBox = styled("div")(({ theme }) => ({
@@ -26,10 +25,6 @@ export default function Content() {
     <ContentBox>
       <Container>
         <HeadingBlock />
-
-        <div className="my-5">
-          <CallDrop variant={"calendar"}>123</CallDrop>
-        </div>
 
         <FlexContainer className="mt-5">
           <FilesViewSelector />

@@ -15,7 +15,7 @@ export default function RowTableHeader(props) {
 
         <FilesTypeSelect />
 
-        <CallDrop variant={"avatar"} max="4"></CallDrop>
+        <CallDrop variant={"avatar"} max="4" />
       </div>
 
       <TableContentSwitch />

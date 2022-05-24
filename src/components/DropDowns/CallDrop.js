@@ -7,6 +7,7 @@ import ClientsSelect from "./ClientsSelect";
 import HeaderAddDrop from "./HeaderAddDrop";
 import AddButton from "../Header/AddButton";
 import MoreFilesDrop from "./MoreFilesDrop";
+import CAvatar from "../UiElements/CAvatar";
 
 // PROPS
 // max - max for avatars
@@ -89,10 +90,18 @@ export default function CallDrop({ variant, ...props }) {
     case "calendar":
       return (
         <div>
-          <Button ClickEvent={ClickEvent} anchorEl={anchorEl}>
+          <Button onClick={ClickEvent} anchorEl={anchorEl}>
             calendar
           </Button>
-          <HeaderAddDrop closeEvent={handleClose} anchorEl={anchorEl} />
+          {/* TODO add calendar pop-up */}
+        </div>
+      );
+
+    case "file_solicitor":
+      return (
+        <div>
+          <CAvatar alt="Remy Sharp" />
+          {/* TODO add calendar pop-up */}
         </div>
       );
 

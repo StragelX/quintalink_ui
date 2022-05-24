@@ -22,7 +22,6 @@ export default function WeekMonthDrop() {
         with_arrow={true}
         text="Week"
         emitClick={AddClickEvent}
-        aria-label="account of current user"
       />
 
       <Paper
