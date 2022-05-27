@@ -10,6 +10,7 @@ const CTypography = styled(Typography)(({ theme }) => ({
 const ActiveDay = styled(Typography)(({ theme }) => ({
   color: theme.palette.white.main,
   backgroundColor: theme.palette.primary.main,
+  borderRadius: "50%",
 }));
 
 const cls = "w-9 h-9 rounded-full flex items-center justify-center";

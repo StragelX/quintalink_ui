@@ -231,7 +231,7 @@ export const verticalTabs = [
   },
 
   {
-    icon: "HomeIcon",
+    icon: "StoreIcon",
     label: "Property",
   },
 
@@ -251,7 +251,7 @@ export const verticalTabs = [
   },
 
   {
-    icon: "InsertDriveFileIcon",
+    icon: "DescriptionIcon",
     label: "Documents",
   },
 ];
