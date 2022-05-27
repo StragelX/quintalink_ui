@@ -1,20 +1,11 @@
 import { Typography } from "@mui/material";
 import * as React from "react";
-import AvatarGroupWrap from "../UiElements/AvatarGroupWrap";
-import CustomChip from "../UiElements/CustomChip";
-import CustomLink from "../UiElements/CustomLink";
-import FlexContainer from "../UiElements/FlexContainer";
-import TypeIcon from "../UiElements/TypeIcon";
+import AvatarGroupWrap from "../../UiElements/AvatarGroupWrap";
+import CustomChip from "../../UiElements/CustomChip";
+import CustomLink from "../../UiElements/CustomLink";
+import FlexContainer from "../../UiElements/FlexContainer";
+import TypeIcon from "../../UiElements/TypeIcon";
 
-// let data = [
-//   {
-//     type: "p",
-//     title: "Manishapatel Peter and Corporation-ABC",
-//     stage: "requisition",
-//     linkText: "PS TC006.02",
-//     link: "",
-//   },
-// ];
 
 export default function WeekTableFile(props) {
   return (

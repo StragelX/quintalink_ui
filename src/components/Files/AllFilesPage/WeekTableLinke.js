@@ -2,7 +2,7 @@ import { Divider } from "@mui/material";
 import * as React from "react";
 import WeekTableFile from "./WeekTableFile";
 import { styled } from "@mui/material/styles";
-import { filesInfo } from "../../data";
+import { filesInfo } from "../../../data";
 
 const CDivider = styled(Divider)(({ theme }) => ({
   margin: "0 10px",

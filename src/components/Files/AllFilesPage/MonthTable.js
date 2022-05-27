@@ -1,5 +1,5 @@
 import * as React from "react";
-import { calendar } from "../../data";
+import { calendar } from "../../../data";
 import MonthTableColumn from "./MonthTableColumn";
 import MonthTableHeader from "./MonthTableHeader";
 

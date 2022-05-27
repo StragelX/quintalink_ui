@@ -1,9 +1,9 @@
 import * as React from "react";
-import FlexContainer from "./../UiElements/FlexContainer";
-import Search from "./../Header/Search";
-import TableContentSwitch from "./../UiElements/TableContentSwitch";
-import FilesTypeSelect from "./../UiElements/FilesTypeSelect";
-import CallDrop from "../DropDowns/CallDrop";
+import FlexContainer from "./../../UiElements/FlexContainer";
+import Search from "./../../Header/Search";
+import TableContentSwitch from "./../../UiElements/TableContentSwitch";
+import FilesTypeSelect from "./../../UiElements/FilesTypeSelect";
+import CallDrop from "../../DropDowns/CallDrop";
 
 export default function RowTableHeader(props) {
   return (

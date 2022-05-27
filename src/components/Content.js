@@ -5,13 +5,13 @@ import FlexContainer from "./UiElements/FlexContainer";
 import FilesViewSelector from "./UiElements/FilesViewSelector";
 import DateSelector from "./UiElements/DateSelector";
 import RoundedPaper from "./UiElements/RoundedPaper";
-import RowTableHeader from "./Files/RowTableHeader";
+import RowTableHeader from "./Files/AllFilesPage/RowTableHeader";
 import CustomTable from "./UiElements/CustomTable/CustomTable";
-import TableDateSelector from "./Files/TableDateSelector";
-import WeekTable from "./Files/WeekTable";
-import MonthTable from "./Files/MonthTable";
+import MonthTable from "./Files/AllFilesPage/MonthTable";
 import HeadingBlock from "./Files/FileDetailPage/HeadingBlock/HeadingBlock";
-import VerticalTabs from "./Files/FileDetailPage/VerticalTabs/VerticalTabs";
+import VerticalTabs from "./Files/FileDetailPage/VerticalTabs";
+import WeekTable from "./Files/AllFilesPage/WeekTable";
+import TableDateSelector from "./Files/AllFilesPage/TableDateSelector";
 
 const ContentBox = styled("div")(({ theme }) => ({
   minHeight: `calc(100vh - 64px)`,

@@ -223,3 +223,37 @@ export const file = [
     closingDate: "04/09/2021",
   },
 ];
+
+export const verticalTabs = [
+  {
+    icon: "GroupIcon",
+    label: "Parties",
+  },
+
+  {
+    icon: "HomeIcon",
+    label: "Property",
+  },
+
+  {
+    icon: "PaidIcon",
+    label: "Mortgage",
+  },
+
+  {
+    icon: "VerifiedUserIcon",
+    label: "Insurance",
+  },
+
+  {
+    icon: "CalculateIcon",
+    label: "Accounting",
+  },
+
+  {
+    icon: "InsertDriveFileIcon",
+    label: "Documents",
+  },
+];
+
+export const partiesTabs = ["Buyer", "Solicitor", "Seller", "Broker"];

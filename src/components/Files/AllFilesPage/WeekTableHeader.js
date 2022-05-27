@@ -1,7 +1,7 @@
 import { styled } from "@mui/material/styles";
 import { Typography } from "@mui/material";
 import * as React from "react";
-import { week } from "../../data";
+import { week } from "../../../data";
 
 const CTypography = styled(Typography)(({ theme }) => ({
   color: theme.palette.text.disabled,
