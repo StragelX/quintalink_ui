@@ -15,7 +15,7 @@ const WhiteBtn = styled(Button)(({ theme }) => ({
   fontSize: 15,
 }));
 
-export default function CustomButton({ variant, ...props }) {
+export default function CustomButton({ variant, children, ...props }) {
   switch (variant) {
     case "white":
       return (
@@ -24,6 +24,7 @@ export default function CustomButton({ variant, ...props }) {
           {props.with_arrow ? <ArrowDropDownIcon /> : ""}
         </WhiteBtn>
       );
+
     case "icon":
       return (
         <IconButton onClick={props.emitClick}>
@@ -31,6 +32,7 @@ export default function CustomButton({ variant, ...props }) {
           {props.with_arrow ? <ArrowDropDownIcon /> : ""}
         </IconButton>
       );
+
     default:
       return (
         <Button variant="contained" color="white" onClick={props.emitClick}>

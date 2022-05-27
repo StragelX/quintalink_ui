@@ -8,6 +8,10 @@ import HeaderAddDrop from "./HeaderAddDrop";
 import AddButton from "../Header/AddButton";
 import MoreFilesDrop from "./MoreFilesDrop";
 import CAvatar from "../UiElements/CAvatar";
+import { Tooltip } from "@material-ui/core";
+import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
+import MainSolicitor from "./MainClerks";
+import MainClerks from "./MainClerks";
 
 // PROPS
 // max - max for avatars
@@ -28,7 +32,7 @@ const CMenuItemMore = styled(MenuItem)(({ theme }) => ({
   fontSize: 13,
 }));
 
-export default function CallDrop({ variant, ...props }) {
+export default function CallDrop({ variant, children, ...props }) {
   const ClickEvent = (event) => {
     setAnchorEl(event.currentTarget);
   };
@@ -72,6 +76,19 @@ export default function CallDrop({ variant, ...props }) {
         </div>
       );
 
+    case "date-with-label":
+      return (
+        <div>
+          <CustomButton onClick={ClickEvent}>{children}</CustomButton>
+          <DataSelection
+            closeEvent={handleClose}
+            anchorEl={anchorEl}
+            value={props.value}
+            label={props.label}
+          />
+        </div>
+      );
+
     case "more_files":
       return (
         <div>
@@ -100,8 +117,36 @@ export default function CallDrop({ variant, ...props }) {
     case "file_solicitor":
       return (
         <div>
-          <CAvatar alt="Remy Sharp" />
-          {/* TODO add calendar pop-up */}
+          <Tooltip title="Remy Sharp">
+            <Button
+              size="small"
+              color="black_06"
+              onClick={ClickEvent}
+              anchorEl={anchorEl}
+            >
+              <CAvatar alt="Remy Sharp" />
+              <ArrowDropDownIcon color="black_06" className="ml-1" />
+            </Button>
+          </Tooltip>
+
+          <MainSolicitor closeEvent={handleClose} anchorEl={anchorEl} />
+        </div>
+      );
+
+    case "file_clerks":
+      return (
+        <div>
+          <Button
+            size="small"
+            color="black_06"
+            onClick={ClickEvent}
+            anchorEl={anchorEl}
+          >
+            <AvatarGroupWrap max={2} />
+            <ArrowDropDownIcon color="black_06" className="ml-1" />
+          </Button>
+
+          <MainClerks closeEvent={handleClose} anchorEl={anchorEl} />
         </div>
       );
 

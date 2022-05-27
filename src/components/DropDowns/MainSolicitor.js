@@ -9,7 +9,7 @@ const CustomBox = styled(Box)(({ theme }) => ({
   padding: theme.spacing(2),
 }));
 
-export default function DataSelection(props) {
+export default function MainSolicitor(props) {
   return (
     <Paper
       anchorEl={props.anchorEl}
@@ -26,8 +26,7 @@ export default function DataSelection(props) {
     >
       <CustomBox>
         <TextField
-          label={props.label}
-          value={props.value}
+          label={props.value}
           variant="standard"
           sx={{ width: "280px" }}
         />
@@ -42,9 +41,7 @@ export default function DataSelection(props) {
             cancel
           </Button>
 
-          <Button variant="contained" size="small">
-            save
-          </Button>
+          <Button variant="contained" size="small">save</Button>
         </Stack>
       </CustomBox>
     </Paper>

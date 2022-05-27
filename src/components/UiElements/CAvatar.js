@@ -17,6 +17,13 @@ export default function CAvatar({ variant, ...props }) {
 
     case "sm":
       return (
+        <Avatar alt={props.name} src="" sx={{ width: 24, height: 24 }}>
+          {props.shortName}
+        </Avatar>
+      );
+
+    case "xs":
+      return (
         <Avatar alt={props.name} src="" sx={{ width: 20, height: 20 }}>
           {props.shortName}
         </Avatar>

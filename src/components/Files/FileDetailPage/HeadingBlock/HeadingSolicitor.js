@@ -5,7 +5,6 @@ import CallDrop from "../../../DropDowns/CallDrop";
 
 const CTypography = styled(Typography)(({ theme }) => ({
   color: theme.palette.black_06.main,
-  marginRight: theme.spacing(2),
 }));
 
 const CDivider = styled(Divider)(({ theme }) => ({
@@ -13,12 +12,11 @@ const CDivider = styled(Divider)(({ theme }) => ({
   height: theme.spacing(2.75),
   alignSelf: "center",
   backgroundColor: "#C4C4C4",
-  marginLeft: theme.spacing(2),
 }));
 
 export default function HeadingSolicitor(props) {
   return (
-    <div className="flex items-center">
+    <div className="flex items-center gap-3">
       <CTypography variant="subtitle2" component={"p"}>
         Solicitor:
       </CTypography>
@@ -26,6 +24,12 @@ export default function HeadingSolicitor(props) {
       <CallDrop variant={"file_solicitor"} />
 
       <CDivider />
+
+      <CTypography variant="subtitle2" component={"p"}>
+        Clerk (s):
+      </CTypography>
+
+      <CallDrop variant={"file_clerks"} />
     </div>
   );
 }

@@ -9,6 +9,6 @@ export default function DropDown({ variant }) {
     case "P":
       return <div>P</div>;
     default:
-      return <div>Default</div>;
+      return "";
   }
 }

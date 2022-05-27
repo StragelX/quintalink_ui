@@ -2,11 +2,25 @@ import * as React from "react";
 import Chip from "@mui/material/Chip";
 import SyncIcon from "@mui/icons-material/Sync";
 import SportsScoreIcon from "@mui/icons-material/SportsScore";
+import CAvatar from "./CAvatar";
+import { styled } from "@material-ui/core";
+
+const AvatarChip = styled(Chip)(({ theme }) => ({
+  paddingLeft: 4,
+
+  "& .MuiChip-label": {
+    marginRight: 8,
+  },
+}));
 
 // PROPS
-// variants: requisition, closing
+// variants: requisition, closing, avatar
 
 export default function CustomChip({ variant, ...props }) {
+  const handleDelete = () => {
+    console.info("You clicked the delete icon.");
+  };
+
   switch (variant) {
     case "requisition":
       return (
@@ -19,6 +33,7 @@ export default function CustomChip({ variant, ...props }) {
           size="small"
         />
       );
+
     case "closing":
       return (
         <Chip
@@ -30,6 +45,18 @@ export default function CustomChip({ variant, ...props }) {
           size="small"
         />
       );
+
+    case "avatar":
+      return (
+        <AvatarChip
+          className={props.className ? props.className : ""}
+          avatar={<CAvatar alt={props.name} variant={"sm"} />}
+          label={props.name}
+          variant="outlined"
+          onDelete={handleDelete}
+        />
+      );
+
     default:
       return "";
   }
