@@ -11,6 +11,7 @@ import TableDateSelector from "./Files/TableDateSelector";
 import WeekTable from "./Files/WeekTable";
 import MonthTable from "./Files/MonthTable";
 import HeadingBlock from "./Files/FileDetailPage/HeadingBlock/HeadingBlock";
+import VerticalTabs from "./Files/FileDetailPage/VerticalTabs/VerticalTabs";
 
 const ContentBox = styled("div")(({ theme }) => ({
   minHeight: `calc(100vh - 64px)`,
@@ -25,6 +26,8 @@ export default function Content() {
     <ContentBox>
       <Container>
         <HeadingBlock />
+
+        <VerticalTabs />
 
         <FlexContainer className="mt-5">
           <FilesViewSelector />

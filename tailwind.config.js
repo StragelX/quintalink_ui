@@ -10,5 +10,10 @@ module.exports = {
         black_06: "rgba(0, 0, 0, 0.6)",
       },
     },
+
+    borderRadius: {
+      "10px": "10px",
+      "50%": "50%",
+    },
   },
 };

@@ -90,6 +90,45 @@ const mainTheme = createTheme({
       },
     },
 
+    MuiTabs: {
+      styleOverrides: {
+        scrollableY: {
+          "& .MuiTabs-indicator": {
+            display: "none",
+          },
+
+          "& .MuiTabs-flexContainerVertical": {
+            gridGap: 10,
+
+            "& .MuiButtonBase-root": {
+              width: 175,
+              height: 54,
+              minHeight: 54,
+              paddingLeft: 24,
+              justifyContent: "flex-start",
+              textTransform: "capitalize",
+              color: "rgba(0, 0, 0, 0.87)",
+
+              "& .MuiSvgIcon-root": {
+                color: "rgba(0, 0, 0, 0.54);",
+                marginRight: 16,
+              },
+
+              "&.Mui-selected": {
+                backgroundColor: "#fff",
+                borderRadius: "10px 0 0 10px",
+                color: "#3B873E",
+
+                "& .MuiSvgIcon-root": {
+                  color: "#4CAF50",
+                },
+              },
+            },
+          },
+        },
+      },
+    },
+
     MuiToggleButton: {
       styleOverrides: {
         root: {

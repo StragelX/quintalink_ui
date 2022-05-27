@@ -5,8 +5,7 @@ export default function FlexContainer({ children, ...props }) {
   return (
     <Paper
       elevation={0}
-      sx={{ borderRadius: "10px" }}
-      className={"w-full " + (props.className ? props.className : "")}
+      className={"w-full rounded-10px " + (props.className ? props.className : "")}
     >
       {children}
     </Paper>
